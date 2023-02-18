@@ -1,26 +1,28 @@
-// variables should be declared with $ sign
-$primary-color : white;
-$accent-color : green;
-$text-color : blue;
+// this is how we can import partials
+@import './reset';
+@import './variables';
 
-// creating map of different font weights
-
-$font-weights:(
-    "lighter" : 100,
-    "regular" : 400,
-    "bigger" : 900
-);
+@function weightFun($weight-name){
+    @return map-get($font-weights, $weight-name);
+}
 
 body {
     background: $primary-color;
-    font-weight: map-get($font-weights , bigger );
+    font-weight: weightFun(bigger);
 }
 .first{
     // this is how we can style the child elements
 
-    //instead of writing full parent
-    p{
+    //instead of writing full parent name we can use & sign 
+    // suppose you have parent with class first and child with class first_paragraph then it can be written as
+    // with #{&} sign 
+    #{&}_paragraph{
         font-size: 40px;
         color:red;
+
+        // if you want to add hover to the first_paragraph then it can be done in follng way
+        &:hover{
+            color: blue;
+        }
     }
 }

@@ -1,0 +1,12 @@
+// variables should be declared with $ sign
+$primary-color : white;
+$accent-color : green;
+$text-color : blue;
+
+// creating map of different font weights
+
+$font-weights:(
+    "lighter" : 100,
+    "regular" : 400,
+    "bigger" : 900
+);

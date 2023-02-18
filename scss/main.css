@@ -1,9 +1,18 @@
-body {
-  background: white;
-  font-weight: 900;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.first p {
+body {
+  background: white;
+  font-weight: 100;
+}
+
+.first .first_paragraph {
   font-size: 40px;
   color: red;
+}
+.first .first_paragraph:hover {
+  color: blue;
 }/*# sourceMappingURL=main.css.map */
