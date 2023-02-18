@@ -1,0 +1,26 @@
+// variables should be declared with $ sign
+$primary-color : white;
+$accent-color : green;
+$text-color : blue;
+
+// creating map of different font weights
+
+$font-weights:(
+    "lighter" : 100,
+    "regular" : 400,
+    "bigger" : 900
+);
+
+body {
+    background: $primary-color;
+    font-weight: map-get($font-weights , bigger );
+}
+.first{
+    // this is how we can style the child elements
+
+    //instead of writing full parent
+    p{
+        font-size: 40px;
+        color:red;
+    }
+}
